@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시간표</title>
+    <style>
+        body {
+            font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
+            background-color: #f8f9fa;
+            color: #333333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 24px;
+            color: #2c3e50;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .table-container {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            width: 100%;
+            max-width: 650px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+            table-layout: fixed;
+        }
+
+        th, td {
+            border: 1px solid #edf2f7;
+            padding: 12px 6px;
+            font-size: 13px;
+            height: 48px;
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+        }
+
+     
+        th {
+            background-color: #f1f5f9;
+            color: #475569;
+            font-weight: 600;
+            font-size: 14px;
+            border-top: none;
+        }
+
+       
+        td:first-child {
+            font-weight: 600;
+            background-color: #f8fafc;
+            color: #64748b;
+            width: 45px;
+        }
+
+        /* 과목 셀 스타일 및 마우스 호버 효과 */
+        td[rowspan], td:not(:empty):not(:first-child) {
+            font-weight: 600;
+            border-radius: 6px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        td[rowspan]:hover, td:not(:empty):not(:first-child):hover {
+            transform: scale(0.98);
+            filter: brightness(0.95);
+        }
+
+       
+        .thermo       { background-color: #e0e7ff; color: #3730a3; } 
+        .history      { background-color: #fef3c7; color: #92400e; }
+        .chapel       { background-color: #ffe4e6; color: #9f1239; } 
+        .ai-photo     { background-color: #ffedd5; color: #9a3412; } 
+        .web-prog     { background-color: #dcfce7; color: #166534; } 
+        .semi-con     { background-color: #ccfbf1; color: #115e59; } 
+        .digital-logic{ background-color: #e0f2fe; color: #075985; } 
+        .career       { background-color: #f3e8ff; color: #6b21a8; } 
+    </style>
+</head>
+<body>
+
+    <h1>학교 시간표</h1>
+
+    <div class="table-container">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>교시</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 9시 -->
+                <tr>
+                    <td>9</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="3" class="thermo">열역학</td>
+                </tr>
+                <!-- 10시 -->
+                <tr>
+                    <td>10</td>
+                    <td></td>
+                    <td rowspan="2" class="history">역사와문화</td>
+                    <td></td>
+                </tr>
+                <!-- 11시 -->
+                <tr>
+                    <td>11</td>
+                    <td class="chapel">채플</td>
+                    <td></td>
+                </tr>
+                <!-- 12시 -->
+                <tr>
+                    <td>12</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- 1시 -->
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="4" class="ai-photo">AI와 포토디자인</td>
+                    <td></td>
+                </tr>
+                <!-- 2시 -->
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td rowspan="3" class="web-prog">웹프로그래밍</td>
+                    <td rowspan="3" class="semi-con">AI반도체공정</td>
+                </tr>
+                <!-- 3시 -->
+                <tr>
+                    <td>3</td>
+                    <td rowspan="3" class="digital-logic">디지털 논리회로</td>
+                    <td></td>
+                </tr>
+                <!-- 4시 -->
+                <tr>
+                    <td>4</td>
+                    <td></td>
+                </tr>
+                <!-- 5시 -->
+                <tr>
+                    <td>5</td>
+                    <td class="career">인생설계와 진로 II</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
